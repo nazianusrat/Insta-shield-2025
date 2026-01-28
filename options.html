@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Instagram Content Filter</title>  <!--   title used for page tab -->
+ 
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Insta Shield</h1>
+    <h3>Protect your online space</h3>
+    
+    <div class="input-group">
+      <label for="keywordInput">Add Keyword:</label>
+      <input type="text" id="keywordInput" placeholder="Enter keyword & press Enter">
+    </div>
+    
+    <div class="table-container">
+      <table id="keywordsTable">
+        <thead>
+          <tr>
+            <th>Keyword</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
+
+    <div class="input-group">
+  <label for="topicInput">Add Content Topic:</label>
+  <input type="text" id="topicInput" placeholder="Enter topic and press Enter">
+</div>
+<div class="table-container">
+  <table id="topicsTable">
+    <thead>
+      <tr>
+        <th>Topic</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+</div>
+
+    
+    <div class="toggle-group">
+      <label>
+        <input type="checkbox" id="filterToggle"> Enable Filter
+      </label>
+      <label>
+        <input type="checkbox" id="logToggle"> Show debug messages
+      </label>
+    </div>
+    
+    <div class="button-group">
+      <button id="save">Save Settings</button>
+    </div>
+  </div>
+  
+  <script src="options.js"></script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+{
+  "manifest_version": 3, // Use Manifest V3 newest version for Chrome extensions.
+  "name": "Instagram Keyword Filter with Blocked image", // Name of the extension.
+  "version": "1.0",
+  "description": "Filters out Instagram posts containing specific keywords and blocked image.", 
+                                                     // Description of the extension.
+  "permissions": [
+    "storage", // Permission to use chrome.storage API for saving settings.
+    "tabs" // Permission to use chrome.tabs API for reloading Instagram tabs.
+  ],
+  "action": {
+    "default_popup": "options.html" // Options page for the extension.
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://www.instagram.com/*"], // Run content script on Instagram pages.
+      "js": ["content.js"]  // Content script file.
+    }
+  ],
+  "background": {
+    "service_worker": "background.js" // Background service worker file.
+  }
+}
